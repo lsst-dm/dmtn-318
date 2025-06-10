@@ -53,9 +53,10 @@ DOIs much more useful if relationships to other DOIs are specified in the metada
 
 * The data release dataset "isCollectedBy" the instrument.
 * The catalog and dataset type component DOIs will be declared as "isPartOf" the main data release DOI.
-* If an IDAC creates a DOI for their copy of a component they shall use "isIdenticalTo" the original dataset. (How do we know which was the original version?)
+* If an IDAC creates a DOI for their copy of a component they shall use "isVariantFormOF" the original dataset even if the copy is identical.[^identical]
+  They shall not use "isPartOf".
 * If an IDAC has a cut down version of a catalog (e.g., "object lite") then that version "isVariantFormOf" the original full catalog.
-* If a data release includes Butler datasets that contain tabular data (for example in Parquet files) that are also available as catalogs in Qserv, then the catalog DOI "isVariantFormOf" the Butler dataset to indicate that they are almost, but not exactly, the same data.
+* If a data release includes Butler datasets that contain tabular data (for example in Parquet files) that are also available as catalogs in Qserv, then the catalog DOI "isVariantFormOf" the Butler dataset to indicate that they are almost, but not exactly, the same data and that the parquet files are the original form.
 * A new data release "Obsoletes" a previous data release.[^dp1]
 * A new release's catalog dataset (e.g., "Object") also "Obsoletes" the corresponding catalog dataset in the previous release.
 
@@ -67,3 +68,4 @@ DOIs much more useful if relationships to other DOIs are specified in the metada
 ```
 
 [^dp1]: Data Preview 1 is not obsoleted by Data Preview 2 since they are completely distinct datasets.
+[^identical]: "IsIdenticalTo" should only be used for cases where the DOIs point to the exact same resource, such as happens if two DOIs are issued by mistake.
