@@ -49,17 +49,20 @@ An open question is whether to create DOIs for "virtual" Butler data products th
 ### Relationships
 
 DOIs much more useful if relationships to other DOIs are specified in the metadata.
-[DataCite](https://support.datacite.org/docs/connecting-to-works) and [Crossref](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/) specify how relationships between DOIs are specified and we will relate release, dataset, and instrument DOIs in the following ways:
+[DataCite](https://support.datacite.org/docs/connecting-to-works) and [Crossref](https://www.crossref.org/documentation/schema-library/markup-guide-metadata-segments/relationships/) specify how relationships between DOIs are specified and we will define relationships between release, dataset, and instrument DOIs
+We should always include the relationships on both DOIs when linking and when we are in control of both sides.
+The intent is to have the following relationships:
 
-* The data release dataset "isCollectedBy" the instrument.
-* The catalog and dataset type component DOIs will be declared as "isPartOf" the main data release DOI.
-* If an IDAC creates a DOI for their copy of a component they shall use "isVariantFormOF" the original dataset even if the copy is identical.[^identical]
-  They shall not use "isPartOf".
-* If an IDAC has a cut down version of a catalog (e.g., "object lite") then that version "isVariantFormOf" the original full catalog.
-* If a data release includes Butler datasets that contain tabular data (for example in Parquet files) that are also available as catalogs in Qserv, then the catalog DOI "isVariantFormOf" the Butler dataset to indicate that they are almost, but not exactly, the same data and that the parquet files are the original form.
+* The data release dataset "IsCollectedBy" the instrument.
+  The component DOIs do not themselves link to the instrument.
+* The catalog and dataset type component DOIs will be declared as "IsPartOf" the main data release DOI.
+  And the primary DOI will link to them using "HasPart".
+* If a data release includes Butler datasets that contain tabular data (for example in Parquet files) that are also available as catalogs in Qserv, then the catalog DOI "isVariantFormOf" the Butler dataset to indicate that they are almost, but not exactly, the same data. The parquet files will relate to the catalogs using "IsOriginalFormOf".
 * A new data release "Obsoletes" a previous data release.[^dp1]
 * A new release's catalog dataset (e.g., "Object") also "Obsoletes" the corresponding catalog dataset in the previous release.
-
+* If an IDAC creates a DOI for their copy of a component they shall use "isVariantFormOF" the original dataset even if the copy is identical.[^identical]
+  They shall not use "IsPartOf".
+* If an IDAC has a cut down version of a catalog (e.g., "object lite") then that version "IsVariantFormOf" the original full catalog.
 
 ## References
 
