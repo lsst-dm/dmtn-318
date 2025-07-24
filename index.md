@@ -31,9 +31,6 @@ OSTI allows instrumentation to be given DOIs.
 Doing this allows us to reference all our data releases to the instrument that generated the data.
 This is an extremely useful way to anchor the observatory outputs and science users should be encouraged to cite the instrument DOI explicitly.
 
-As part of the Data Preview 1 activity {cite:p}`RTN-085` we demonstrated this by creating a DOI for LSSTComCam {cite:p}`10.71929/rubin/2561361`.
-We intend to create DOIs for both LATISS and LSSTCam as well.
-
 ## Data Release DOIs
 
 Rubin Observatory plans to make annual data releases of the Legacy Survey of Space and Time {cite:p}`2019ApJ...873..111I`.
@@ -60,6 +57,55 @@ DOIs much more useful if relationships to other DOIs are specified in the metada
 * A new data release "Obsoletes" a previous data release.[^dp1]
 * A new release's catalog dataset (e.g., "Object") also "Obsoletes" the corresponding catalog dataset in the previous release.
 
+## Data Preview 1
+
+Data Preview 1 (DP1) {cite:p}`RTN-095,RTN-085` was released to the data rights holders on June 20th, 2025.
+This was the first data release from Rubin and we created DOIs as outlined in this document.
+DP1 consisted of data taken by the LSST Commissioning Camera and an instrument DOI was created for it {cite:p}`10.71929/rubin/2561361`.
+We have subsequently created instrument DOIs for both LATISS {cite:p}`10.71929/rubin/2571930` and LSSTCam {cite:p}`10.71929/rubin/2571927` to prepare for future data releases.
+
+For DP1 the following DOIs were created:
+
+* [10.71929/rubin/2570308](https://doi.org/10.71929/rubin/2570308) (DP1) isCollectedBy [10.71929/rubin/2561361](https://doi.org/10.71929/rubin/2561361) (LSSTComCam)
+* [10.71929/RUBIN/2570309](https://doi.org/10.71929/RUBIN/2570309) (butler-calibrations) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570313](https://doi.org/10.71929/RUBIN/2570313) (butler-deep_coadd) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570318](https://doi.org/10.71929/RUBIN/2570318) (butler-dia_object) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570320](https://doi.org/10.71929/RUBIN/2570320) (butler-dia_object_forced_source) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570316](https://doi.org/10.71929/RUBIN/2570316) (butler-dia_source) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570312](https://doi.org/10.71929/RUBIN/2570312) (butler-difference_image) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570324](https://doi.org/10.71929/RUBIN/2570324) (butler-object) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570326](https://doi.org/10.71929/RUBIN/2570326) (butler-object_forced_source) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570310](https://doi.org/10.71929/RUBIN/2570310) (butler-raw) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570322](https://doi.org/10.71929/RUBIN/2570322) (butler-source) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570334](https://doi.org/10.71929/RUBIN/2570334) (butler-ss_object) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570332](https://doi.org/10.71929/RUBIN/2570332) (butler-ss_source) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570315](https://doi.org/10.71929/RUBIN/2570315) (butler-survey-property) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570314](https://doi.org/10.71929/RUBIN/2570314) (butler-template_coadd) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570330](https://doi.org/10.71929/RUBIN/2570330) (butler-visit_detector_table) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570311](https://doi.org/10.71929/RUBIN/2570311) (butler-visit_image) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570328](https://doi.org/10.71929/RUBIN/2570328) (butler-visit_table) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570331](https://doi.org/10.71929/RUBIN/2570331) (tap-CcdVisit) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570319](https://doi.org/10.71929/RUBIN/2570319) (tap-DiaObject) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570317](https://doi.org/10.71929/RUBIN/2570317) (tap-DiaSource) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570327](https://doi.org/10.71929/RUBIN/2570327) (tap-ForcedSource) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570321](https://doi.org/10.71929/RUBIN/2570321) (tap-ForcedSourceOnDiaObject) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570325](https://doi.org/10.71929/RUBIN/2570325) (tap-Object) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570335](https://doi.org/10.71929/RUBIN/2570335) (tap-SSObject) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570333](https://doi.org/10.71929/RUBIN/2570333) (tap-SSSource) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570323](https://doi.org/10.71929/RUBIN/2570323) (tap-Source) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570329](https://doi.org/10.71929/RUBIN/2570329) (tap-Visit) isPartOf [10.71929/RUBIN/2570308](https://doi.org/10.71929/RUBIN/2570308) (DP1)
+* [10.71929/RUBIN/2570316](https://doi.org/10.71929/RUBIN/2570316) (butler-dia_source) isOriginalFormOf [10.71929/RUBIN/2570317](https://doi.org/10.71929/RUBIN/2570317) (tap-DiaSource)
+* [10.71929/RUBIN/2570318](https://doi.org/10.71929/RUBIN/2570318) (butler-dia_object) isOriginalFormOf [10.71929/RUBIN/2570319](https://doi.org/10.71929/RUBIN/2570319) (tap-DiaObject)
+* [10.71929/RUBIN/2570320](https://doi.org/10.71929/RUBIN/2570320) (butler-dia_object_forced_source) isOriginalFormOf [10.71929/RUBIN/2570321](https://doi.org/10.71929/RUBIN/2570321) (tap-ForcedSourceOnDiaObject)
+* [10.71929/RUBIN/2570322](https://doi.org/10.71929/RUBIN/2570322) (butler-source) isOriginalFormOf [10.71929/RUBIN/2570323](https://doi.org/10.71929/RUBIN/2570323) (tap-Source)
+* [10.71929/RUBIN/2570324](https://doi.org/10.71929/RUBIN/2570324) (butler-object) isOriginalFormOf [10.71929/RUBIN/2570325](https://doi.org/10.71929/RUBIN/2570325) (tap-Object)
+* [10.71929/RUBIN/2570326](https://doi.org/10.71929/RUBIN/2570326) (butler-object_forced_source) isOriginalFormOf [10.71929/RUBIN/2570327](https://doi.org/10.71929/RUBIN/2570327) (tap-ForcedSource)
+* [10.71929/RUBIN/2570328](https://doi.org/10.71929/RUBIN/2570328) (butler-visit_table) isOriginalFormOf [10.71929/RUBIN/2570329](https://doi.org/10.71929/RUBIN/2570329) (tap-Visit)
+* [10.71929/RUBIN/2570330](https://doi.org/10.71929/RUBIN/2570330) (butler-visit_detector_table) isOriginalFormOf [10.71929/RUBIN/2570331](https://doi.org/10.71929/RUBIN/2570331) (tap-CcdVisit)
+* [10.71929/RUBIN/2570332](https://doi.org/10.71929/RUBIN/2570332) (butler-ss_source) isOriginalFormOf [10.71929/RUBIN/2570333](https://doi.org/10.71929/RUBIN/2570333) (tap-SSSource)
+* [10.71929/RUBIN/2570334](https://doi.org/10.71929/RUBIN/2570334) (butler-ss_object) isOriginalFormOf [10.71929/RUBIN/2570335](https://doi.org/10.71929/RUBIN/2570335) (tap-SSObject)
+
+although only the primary relationships are noted here.
 
 ## References
 
