@@ -5,6 +5,8 @@ Each LSST Data Release has to be associated with dataset DOIs.
 This document will describe the motivation and policy for issuing DOIs for Data Releases.
 ```
 
+DOI: [10.71929/rubin/2583847](https://doi.org/10.71929/rubin/2583847)
+
 ## Digital Object Identifiers in Publications
 
 The AAS [strongly recommend](https://journals.aas.org/data-guide/) that all papers submitted to their journals follow the best practices outlined in {cite:t}`2022ApJS..260....5C`.
